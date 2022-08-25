@@ -45,7 +45,7 @@ main {
 section {
     margin: 0 auto;
     padding: 1rem;
-    margin-bottom: 0.625rem;
+    /* margin-bottom: 0.625rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@ h1 {
 /* article que acomoda a questao completa */
 .questao {
     max-width: 480px;
-    /*padding: 1.5rem;*/
+    padding: 1.5rem;
     border: 1px solid #ececec;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -118,8 +118,8 @@ h1 {
     color: #191919;
     padding: 0.625rem;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     margin-bottom: 1rem;
 }
 
@@ -132,7 +132,14 @@ h1 {
 
 #autoria {
     font-size: 1rem;
-    color: #22b1b1;
+    color: #000;
+	padding: 5px 0 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+	border-top:1px solid #e5e5e5;
+	background-color: #fff;
 }
 
 /*barra de progresso*/

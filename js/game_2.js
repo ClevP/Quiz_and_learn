@@ -3,8 +3,10 @@ $(document).ready(function() {
 		$(".begin_quiz").hide();
 		$(".moedas").show();
 		$(".barra_progresso").show();
+		$(".instrucoes").show();
 		$(".questao").show();
-		
+		var instrucoes_id = $("#instrucoes_id").val();
+		instrucoes_id = atob(instrucoes_id);
 		var retorno, x,y,n, tmp, ordem_array ="", arr = [], maximo = 10;;
 		for (x = 0; x < 10; x++) {
 		   arr[x] = x + 1;
@@ -25,7 +27,8 @@ $(document).ready(function() {
 			dataType:"json",
 			url:'data.json',
 			success: function(data){
-				retorno = data["questoes"];
+				console.log(data);
+				retorno = data["questoes"+instrucoes_id];
 				// $('#nQuestao').html(retorno[arr[0]]["numQuestao"]);
 				$('#nQuestao').html("1");
 				$('#pergunta').html(retorno[arr[0]]["pergunta"]);
@@ -53,6 +56,8 @@ $(document).ready(function() {
 		position_question = parseInt(position_question)+1;
 		var bar = position_question*10;
 		var arr = ordem_array.split(",");
+		var instrucoes_id = $("#instrucoes_id").val();
+		instrucoes_id = atob(instrucoes_id);
 		if(position_question-1 != total_question){
 			for(var y=1;y<arr.length;y++){
 				ordem_array = (y==1)?arr[y]:ordem_array+","+arr[y];
@@ -67,7 +72,7 @@ $(document).ready(function() {
 			dataType:"json",
 			url:'data.json',
 			success: function(data){
-				retorno = data["questoes"];
+				retorno = data["questoes"+instrucoes_id];
 				if(retorno[questao]["correta"] == value){
 					coins = parseInt(coins)+10;
 					document.querySelector('#somAcerto').play();
@@ -91,7 +96,32 @@ $(document).ready(function() {
 					}, 500);
 				}else{
 					setTimeout(function() { 
-						$(".begin_quiz").show();
+						instrucoes_id = parseInt(instrucoes_id)+1;
+						$("#instrucoes_id").val(btoa(instrucoes_id));
+						switch(instrucoes_id) {
+							case 2:
+								$("#instrucoes").html("Segunda etapa - Médio");
+								$("#instrucoes").css("background-color","#fff700");
+								break;
+							case 3:
+								$("#instrucoes").html("Terceira etapa - Difícil");
+								$("#instrucoes").css("background-color","#ff0000");
+								break;
+						}
+						if(instrucoes_id !=4){
+							$(".begin_quiz").show();
+							
+						}else{
+							$("#instrucoes").hide();
+							$(".placar").hide();
+							if(coins >100){
+								var texto_fim = "Parabéns, você conseguiu concluir o teste!";
+							}else{
+								var texto_fim = "Infelizmente você só conseguiu "+coins+" Moedas e não conseguiu passar!";
+							}
+							$("#final_quest").html(texto_fim);
+							$("#final_quest").show();
+						}
 						$(".barra_progresso").hide();
 						$(".questao").hide();
 					}, 500);

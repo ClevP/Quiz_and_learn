@@ -1,5 +1,205 @@
 {
-    "questoes": [{
+    "questoes1": [{
+            "numQuestao": 0,
+            "pergunta": "pergunta",
+            "alternativaA": "Alternativa A",
+            "alternativaB": "Alternativa B",
+            "alternativaC": "Alternativa C",
+            "alternativaD": "Alternativa D",
+            "correta": "0"
+        },
+        {
+            "numQuestao": 1,
+            "pergunta": "Quem descobriu o Brasil foi...",
+            "alternativaA": "Pedro Vaz Caminha",
+            "alternativaB": "Colombo",
+            "alternativaC": "Tomas Edson",
+            "alternativaD": "Pedro Alvares Cabral",
+            "correta": "Pedro Alvares Cabral"
+        },
+        {
+            "numQuestao": 2,
+            "pergunta": "A Moeda atual do Brasil é...",
+            "alternativaA": "Dólar",
+            "alternativaB": "Real",
+            "alternativaC": "Libras",
+            "alternativaD": "Euro",
+            "correta": "Real"
+        },
+        {
+            "numQuestao": 3,
+            "pergunta": "Qual é a capital do Brasil?",
+            "alternativaA": "Rio de Janeiro",
+            "alternativaB": "Brasília",
+            "alternativaC": "Salvador",
+            "alternativaD": "Lisboa",
+            "correta": "Brasília"
+        },
+        {
+            "numQuestao": 4,
+            "pergunta": "O Estado físico da água no oceano?",
+            "alternativaA": "Sólido",
+            "alternativaB": "Gasoso",
+            "alternativaC": "Pastoso",
+            "alternativaD": "Líquido",
+            "correta": "Líquido"
+        },
+        {
+            "numQuestao": 5,
+            "pergunta": "A linha do Equador divide a Terra em...",
+            "alternativaA": "Leste e Oeste",
+            "alternativaB": "Norte e Sul",
+            "alternativaC": "Verão e Inverno",
+            "alternativaD": "Solstícios e Eclipses",
+            "correta": "Norte e Sul"
+        },
+        {
+            "numQuestao": 6,
+            "pergunta": "Quinto dia da semana é?",
+            "alternativaA": "Quinta-feira",
+            "alternativaB": "Sexta-Feira",
+            "alternativaC": "Terça-feira",
+            "alternativaD": "Sábado",
+            "correta": "Quinta-feira"
+        },
+        {
+            "numQuestao": 7,
+            "pergunta": "Qual é o clima predominante do Brasil?",
+            "alternativaA": "Polar",
+            "alternativaB": "Tropical",
+            "alternativaC": "Desértico",
+            "alternativaD": "Temperado do Norte",
+            "correta": "Tropical"
+        },
+        {
+            "numQuestao": 8,
+            "pergunta": "Se juntar azul e amarelo dará?",
+            "alternativaA": "Verde",
+            "alternativaB": "Laranja",
+            "alternativaC": "Amarelo escuro",
+            "alternativaD": "Marrom",
+            "correta": "Verde"
+        },
+        {
+            "numQuestao": 9,
+            "pergunta": "O Brasil se localiza em qual continente?",
+            "alternativaA": "África",
+            "alternativaB": "Europa",
+            "alternativaC": "Oceania",
+            "alternativaD": "América",
+            "correta": "América"
+        },
+        {
+            "numQuestao": 10,
+            "pergunta": "Qual é a única capital do Brasil cortada pela linha do Equador?",
+            "alternativaA": "Belém",
+            "alternativaB": "São Luís",
+            "alternativaC": "Macapá",
+            "alternativaD": "Boa Vista",
+            "correta": "Macapá"
+        }
+    ],
+	"questoes2": [{
+            "numQuestao": 0,
+            "pergunta": "pergunta",
+            "alternativaA": "Alternativa A",
+            "alternativaB": "Alternativa B",
+            "alternativaC": "Alternativa C",
+            "alternativaD": "Alternativa D",
+            "correta": "0"
+        },
+        {
+            "numQuestao": 1,
+            "pergunta": "Quem descobriu o Brasil foi...",
+            "alternativaA": "Pedro Vaz Caminha",
+            "alternativaB": "Colombo",
+            "alternativaC": "Tomas Edson",
+            "alternativaD": "Pedro Alvares Cabral",
+            "correta": "Pedro Alvares Cabral"
+        },
+        {
+            "numQuestao": 2,
+            "pergunta": "A Moeda atual do Brasil é...",
+            "alternativaA": "Dólar",
+            "alternativaB": "Real",
+            "alternativaC": "Libras",
+            "alternativaD": "Euro",
+            "correta": "Real"
+        },
+        {
+            "numQuestao": 3,
+            "pergunta": "Qual é a capital do Brasil?",
+            "alternativaA": "Rio de Janeiro",
+            "alternativaB": "Brasília",
+            "alternativaC": "Salvador",
+            "alternativaD": "Lisboa",
+            "correta": "Brasília"
+        },
+        {
+            "numQuestao": 4,
+            "pergunta": "O Estado físico da água no oceano?",
+            "alternativaA": "Sólido",
+            "alternativaB": "Gasoso",
+            "alternativaC": "Pastoso",
+            "alternativaD": "Líquido",
+            "correta": "Líquido"
+        },
+        {
+            "numQuestao": 5,
+            "pergunta": "A linha do Equador divide a Terra em...",
+            "alternativaA": "Leste e Oeste",
+            "alternativaB": "Norte e Sul",
+            "alternativaC": "Verão e Inverno",
+            "alternativaD": "Solstícios e Eclipses",
+            "correta": "Norte e Sul"
+        },
+        {
+            "numQuestao": 6,
+            "pergunta": "Quinto dia da semana é?",
+            "alternativaA": "Quinta-feira",
+            "alternativaB": "Sexta-Feira",
+            "alternativaC": "Terça-feira",
+            "alternativaD": "Sábado",
+            "correta": "Quinta-feira"
+        },
+        {
+            "numQuestao": 7,
+            "pergunta": "Qual é o clima predominante do Brasil?",
+            "alternativaA": "Polar",
+            "alternativaB": "Tropical",
+            "alternativaC": "Desértico",
+            "alternativaD": "Temperado do Norte",
+            "correta": "Tropical"
+        },
+        {
+            "numQuestao": 8,
+            "pergunta": "Se juntar azul e amarelo dará?",
+            "alternativaA": "Verde",
+            "alternativaB": "Laranja",
+            "alternativaC": "Amarelo escuro",
+            "alternativaD": "Marrom",
+            "correta": "Verde"
+        },
+        {
+            "numQuestao": 9,
+            "pergunta": "O Brasil se localiza em qual continente?",
+            "alternativaA": "África",
+            "alternativaB": "Europa",
+            "alternativaC": "Oceania",
+            "alternativaD": "América",
+            "correta": "América"
+        },
+        {
+            "numQuestao": 10,
+            "pergunta": "Qual é a única capital do Brasil cortada pela linha do Equador?",
+            "alternativaA": "Belém",
+            "alternativaB": "São Luís",
+            "alternativaC": "Macapá",
+            "alternativaD": "Boa Vista",
+            "correta": "Macapá"
+        }
+    ],
+	"questoes3": [{
             "numQuestao": 0,
             "pergunta": "pergunta",
             "alternativaA": "Alternativa A",

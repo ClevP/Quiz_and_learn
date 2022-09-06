@@ -27,7 +27,7 @@ $(document).ready(function() {
 			dataType:"json",
 			url:'data.json',
 			success: function(data){
-				console.log(data);
+				// console.log(data);
 				retorno = data["questoes"+instrucoes_id];
 				// $('#nQuestao').html(retorno[arr[0]]["numQuestao"]);
 				$('#nQuestao').html("1");
@@ -42,6 +42,9 @@ $(document).ready(function() {
 				$('#position_question').val("1");
 				$('#total_questions').val(arr.length);
 				$('.progress-bar').css("width", "10%");
+				$("#tm").val(0);
+				$("#cronometro").show();
+				startCountdown();
 			}
 		});
 	});
@@ -95,7 +98,8 @@ $(document).ready(function() {
 						$('#coins').val(coins);
 					}, 500);
 				}else{
-					setTimeout(function() { 
+					$("#tm").val(2);
+					setTimeout(function() {
 						instrucoes_id = parseInt(instrucoes_id)+1;
 						$("#instrucoes_id").val(btoa(instrucoes_id));
 						switch(instrucoes_id) {
@@ -110,18 +114,18 @@ $(document).ready(function() {
 						}
 						if(instrucoes_id !=4){
 							$(".begin_quiz").show();
-							
 						}else{
 							$("#instrucoes").hide();
 							$(".placar").hide();
 							if(coins >100){
-								var texto_fim = "Parabéns, você conseguiu concluir o teste!";
+								var texto_fim = "Parabéns, você conseguiu concluir o teste! <br/> <a href='assets/images/interrogacao.png' download>Clique aqui e faça o download! </a>";
 							}else{
 								var texto_fim = "Infelizmente você só conseguiu "+coins+" Moedas e não conseguiu passar!";
 							}
 							$("#final_quest").html(texto_fim);
 							$("#final_quest").show();
 						}
+						$("#cronometro").hide();
 						$(".barra_progresso").hide();
 						$(".questao").hide();
 					}, 500);
@@ -131,72 +135,48 @@ $(document).ready(function() {
 	});
 });
 
-
-
-
-
-
-
-
+var tempo = "";
+function startCountdown(){
+	var tm = $("#tm").val();
+	if(tm!="1"){
+		var instrucoes_id = $("#instrucoes_id").val();
+		instrucoes_id = atob(instrucoes_id);
+		if(instrucoes_id == 1) {
+			tempo = 60;// Tempo em segundos
+		}else if(instrucoes_id == 2) {
+			tempo = 40;// Tempo em segundos
+		}else if(instrucoes_id == 3) {
+			tempo = 20;// Tempo em segundos
+		}
+		$("#tm").val(1);
+	}
+	
+	if((tempo - 1) >= 0){
+		var min = parseInt(tempo/60);
+		var seg = tempo%60;
+		if(min < 10){
+			min = "0"+min;
+			min = min.substr(0, 2);
+		}
+		if(seg <=9){
+			seg = "0"+seg;
+		}
+		$("#cronometro").html('00:'+min+':'+seg);
+		tempo = parseInt(tempo-1);
+		if(tm!="2"){
+			setTimeout("startCountdown()",1000);
+		}
+	} else {
+		$("#cronometro").hide();
+		$("#instrucoes").hide();
+		$(".placar").hide();
+		$(".barra_progresso").hide();
+		$(".questao").hide();
+		$("#final_quest").html("Infelizmente seu tempo acabou e você não conseguiu passar!");
+		$("#final_quest").show();
+	}
+}
 
 let somAcerto = document.querySelector('#somAcerto')
 let somErro = document.querySelector('#somErro')
 let somAplausos = document.querySelector('#somAplausos')
-
-
-
-
-
-
-
-
-
-/*
-function pegarDados(i) {
-	const url = 'data.json'; // ENDERECO DO ARQUIVO JSON
-    fetch(url).then(response => {
-
-        return response.json();
-
-    }).then(data => {
-
-        if (data.erro) {
-            console.log("Erro ao acessar o JSON");
-            return;
-        }
-
-        // passar o quantidade de questoes para a variavel
-        let qtdQuestoes = (data.questoes.length) - 1;
-        // escrver a qtdQuestoes para total
-        total.textContent = parseInt(qtdQuestoes);
-
-        // passe o valor de i no parametro
-        atribuirDados(data, i);
-
-    })
-
-} // fim pegarDados
-
-function atribuirDados(data, i) {
-    if (i >= data.questoes.length) {
-        //console.log('Fim das questoes')
-        i = 1
-    }
-	var nQuestao = $('#nQuestao').html();
-    nQuestao.textContent = data.questoes[i].numQuestao
-    pergunta.textContent = data.questoes[i].pergunta
-
-    a.textContent = data.questoes[i].alternativaA
-    b.textContent = data.questoes[i].alternativaB
-    c.textContent = data.questoes[i].alternativaC
-    d.textContent = data.questoes[i].alternativaD
-
-    numero.textContent = data.questoes[i].numQuestao
-
-    let certa = document.querySelector('#correct')
-    certa.value = data.questoes[i].correta
-    //console.log(resposta)
-}
-
-
-*/

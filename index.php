@@ -26,6 +26,8 @@
 				
 				<div class="col-md-12 moedas" style="margin: 10px 0;display:none;">
 					<span class='placar'>0 Moedas</span>
+					<br/>
+					<span id='cronometro'></span>
 					<span id="final_quest"></span>
 				</div>
 				
@@ -68,6 +70,7 @@
 			<input type="hidden" id='total_questions' name='total_questions' value='' />
 			<input type="hidden" id='position_question' name='position_question' value='' />
 			<input type="hidden" id='coins' name='coins' value='0' />
+			<input type="hidden" id='tm' name='tm' value='0' />
 		</div>
 	</body>
 	<footer class="centro" id='autoria'>

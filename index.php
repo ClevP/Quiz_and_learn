@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="">
 
 	<head>
 		<link rel="icon" href="assets/images/logo_crop.jpg" />
@@ -13,7 +13,7 @@
 
 	</head>
 
-	<body style="height:auto;">
+	<body style="height:auto;background-color: #F3D548;">
 		<div class="container tela-principal" style="/*border-left: 1px solid #dbdbdb; border-right: 1px solid #dbdbdb;*/">
 			<div class="row" style="text-align:center;">
 				<div class="col-md-12" style="margin: 10px 0;">
@@ -73,7 +73,7 @@
 			<input type="hidden" id='tm' name='tm' value='0' />
 		</div>
 	</body>
-	<footer class="centro" id='autoria'>
+	<footer class="centro" id='autoria' style="background-color: #ffed9b;">
 		Desenvolvido por IT DevTech Service
 	</footer>
 	<!--script src="js/game.js"></script-->

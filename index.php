@@ -20,7 +20,7 @@
 					<img src="assets/images/interrogacao.png" alt="Logo" style="width:10%;">
 				</div>
 				<div class="col-md-12" style="margin: 10px 0;">
-					<span id='instrucoes'>Primeira etapa - Fácil</span>
+					<span id='instrucoes'>Fase 1</span>
 					<input type="hidden" id='instrucoes_id' name='instrucoes_id' value="<?=base64_encode(1)?>" />
 				</div>
 				

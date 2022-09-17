@@ -104,11 +104,11 @@ $(document).ready(function() {
 						$("#instrucoes_id").val(btoa(instrucoes_id));
 						switch(instrucoes_id) {
 							case 2:
-								$("#instrucoes").html("Segunda etapa - Médio");
+								$("#instrucoes").html("Fase 2");
 								$("#instrucoes").css("background-color","#fff700");
 								break;
 							case 3:
-								$("#instrucoes").html("Terceira etapa - Difícil");
+								$("#instrucoes").html("Fase 3");
 								$("#instrucoes").css("background-color","#ff0000");
 								break;
 						}

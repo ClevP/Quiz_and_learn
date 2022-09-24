@@ -82,6 +82,8 @@ $(document).ready(function() {
 				}else{
 					document.querySelector('#somErro').play();
 				}
+				$('.placar').html(coins+" Moedas");
+				$('#coins').val(coins);
 				if(ordem_array != ""){
 					setTimeout(function() { 
 						$('#nQuestao').html(position_question);
@@ -94,8 +96,6 @@ $(document).ready(function() {
 						$('#question_id').val(arr[0]);
 						$('#position_question').val(position_question);
 						$('.progress-bar').css("width", bar+"%");
-						$('.placar').html(coins+" Moedas");
-						$('#coins').val(coins);
 					}, 500);
 				}else{
 					$("#tm").val(2);
